@@ -41,7 +41,7 @@ class ProfileDrawer extends StatelessWidget {
                     'DIY_Enthusiast',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 24,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -49,7 +49,7 @@ class ProfileDrawer extends StatelessWidget {
                     'Building dreams, one project at a time',
                     style: TextStyle(
                       color: Colors.white70,
-                      fontSize: 14,
+                      fontSize: 10,
                     ),
                   ),
                 ],

@@ -9,6 +9,10 @@ class UserPost {
   bool isLiked;
   final bool isSponsored;
 
+  // ✅ NEW: media links
+  final String? imageUrl;   // For photo posts
+  final String? videoUrl;   // For reel/video posts
+
   UserPost({
     required this.username,
     required this.description,
@@ -17,6 +21,8 @@ class UserPost {
     required this.isReel,
     this.isLiked = false,
     this.isSponsored = false,
+    this.imageUrl,
+    this.videoUrl,
   });
 
   void incrementLikes() {
@@ -58,44 +64,45 @@ class AppState {
   static List<UserPost> posts = [
     UserPost(
       username: "DIY_Master",
-      description: "Just finished this custom wooden shelf! Used reclaimed wood and simple tools. #DIY #Woodworking",
+      description:
+      "Just finished this custom wooden shelf! Used reclaimed wood and simple tools. #DIY #Woodworking",
       likes: 234,
       comments: 45,
       isReel: false,
       isSponsored: false,
+      imageUrl: "https://www.allisajacobs.com/wp-content/uploads/2019/09/allisajacobsshelves-1-768x1024.jpg", // ✅ Example image link
     ),
     UserPost(
       username: "CraftQueen",
-      description: "Easy macrame wall hanging tutorial coming soon! Perfect for beginners 🌿",
+      description:
+      "Easy macrame wall hanging tutorial coming soon! Perfect for beginners 🌿",
       likes: 189,
       comments: 32,
       isReel: false,
       isSponsored: false,
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvxKTq5bNXFAD3NhbHLSJcRNHOS9qiot7NzA&s",
     ),
     UserPost(
       username: "ToolShopPro",
-      description: "SPONSORED: New cordless drill on sale! Perfect for all your DIY projects. Link in bio.",
+      description:
+      "SPONSORED: New cordless drill on sale! Perfect for all your DIY projects. Link in bio.",
       likes: 567,
       comments: 89,
       isReel: false,
       isSponsored: true,
+      imageUrl: "https://www.toolsmart.pk/cdn/shop/files/CDLI206021.jpg?v=1728039285&width=1000",
     ),
     UserPost(
       username: "HomeRenovator",
-      description: "Bathroom makeover complete! Swipe to see before & after. Total cost: \$500",
+      description:
+      "Bathroom makeover complete! Swipe to see before & after. Total cost: \$500",
       likes: 892,
       comments: 156,
       isReel: false,
       isSponsored: false,
+      imageUrl: "https://plus.unsplash.com/premium_photo-1676320514136-5a15d9f97dfa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmF0aHJvb218ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     ),
-    UserPost(
-      username: "QuickFix_Guru",
-      description: "60-second reel: How to fix a leaky faucet! Save this for later 💧",
-      likes: 1240,
-      comments: 203,
-      isReel: true,
-      isSponsored: false,
-    ),
+
   ];
 
   static List<TutorialRecipe> tutorials = [
